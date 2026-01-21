@@ -1,0 +1,26 @@
+<div class="header">
+    <h1>Transporte en Tiempo Real</h1>
+  </div>
+  
+  <div class="ruta-buttons">
+    <button (click)="cambiarRuta('ruta20')" class="route-btn">Ruta 20</button>
+    <button (click)="cambiarRuta('ruta40')" class="route-btn">Ruta 40</button>
+    <button (click)="cambiarRuta('ruta50')" class="route-btn">Ruta 50</button>
+  </div>
+  
+  <div class="container">
+    <!-- Mapa -->
+    <div id="map" class="map-container"></div>
+  
+    <!-- Barra lateral con rutas disponibles -->
+    <div class="sidebar">
+      <h2>Rutas Disponibles</h2>
+      <div class="route-list">
+        <div *ngFor="let ruta of rutas" class="route-item">
+          <h3>{{ ruta.nombre }}</h3>
+          <p>{{ ruta.descripcion }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
